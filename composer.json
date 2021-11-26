@@ -12,7 +12,7 @@
         "pool-info"
     ],
     "homepage": "https://github.com/Noso-Project/NosoPHP",
-    "license": "The Unlicense",
+    "license": "Unlicense",
     "autoload": {
         "psr-0": {
             "Noso": "src"
