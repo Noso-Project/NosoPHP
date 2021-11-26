@@ -14,8 +14,8 @@
     "homepage": "https://github.com/Noso-Project/NosoPHP",
     "license": "Unlicense",
     "autoload": {
-        "psr-0": {
-            "Noso": "src"
+        "psr-4": {
+            "Noso\\": "src/"
         }
     },
     "authors": [
