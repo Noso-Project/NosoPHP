@@ -10,7 +10,7 @@
         "node-info",
         "poolinfo",
         "pool-info"
-    ]
+    ],
     "homepage": "https://github.com/Noso-Project/NosoPHP",
     "license": "The Unlicense",
     "autoload": {
