@@ -13,11 +13,6 @@
     ],
     "homepage": "https://github.com/Noso-Project/NosoPHP",
     "license": "Unlicense",
-    "autoload": {
-        "psr-4": {
-            "Noso\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "Gustavo 'Gus' Carreno",
@@ -25,12 +20,11 @@
             "role": "Developer"
         }
     ],
-    "repositories": [
-        {
-            "type": "github",
-            "url": "https://github.com/Noso-Project/NosoPHP"
+    "autoload": {
+        "psr-4": {
+            "Noso\\": "src/"
         }
-    ],
+    },
     "require": {
         "php": ">=7.3"
     }
