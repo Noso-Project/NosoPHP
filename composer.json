@@ -27,7 +27,7 @@
     ],
     "repositories": [
         {
-            "type": "composer",
+            "type": "github",
             "url": "https://github.com/Noso-Project/NosoPHP"
         }
     ],
