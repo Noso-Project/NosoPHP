@@ -15,7 +15,7 @@ class NosoNode {
         $this->host = $host;
         $this->port = $port;
 
-        $this->client = new NosoClient($this->host, $this->port, 30);
+        $this->client = new NosoClient($this->host, $this->port);
     }
 
     private function _fetch($request){
