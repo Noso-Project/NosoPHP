@@ -15,6 +15,11 @@ class PoolInfo{
     public $miners;
 
     public function __construct(){
+        $this->name = '';
+        $this->hashRate = -1;
+        $this->fee = -1;
+        $this->share = -1;
+        $this->minerCount = 0;
         $this->miners = array();
     }
 
