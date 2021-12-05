@@ -12,7 +12,7 @@ class NosoClient{
     private $socket;
     private $connected;
 
-    function __construct($host, $port, $timeout){
+    function __construct($host, $port, $timeout = 30){
         $this->host = $host;
         $this->port = $port;
         $this->timeout = $timeout;

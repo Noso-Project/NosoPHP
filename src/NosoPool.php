@@ -23,7 +23,7 @@ class NosoPool{
         $this->port = $port;
         $this->password = $password;
 
-        $this->client = new NosoClient($this->host, $this->port, 300);
+        $this->client = new NosoClient($this->host, $this->port, 30);
     }
 
     private function _fetch($request){
