@@ -11,6 +11,7 @@ class PoolInfo{
     public $hashRate;
     public $fee;
     public $share;
+    public $difficulty;
     public $minerCount;
     public $miners;
 
@@ -19,6 +20,7 @@ class PoolInfo{
         $this->hashRate = -1;
         $this->fee = -1;
         $this->share = -1;
+        $this->difficulty = -1;
         $this->minerCount = 0;
         $this->miners = array();
     }

@@ -51,15 +51,34 @@ class NosoPool{
                 $poolInfo->hashRate = intval($response[1]);
                 $poolInfo->fee = intval($response[2]);
                 $poolInfo->share = intval($response[3]);
-                $poolInfo->minerCount = intval($response[4]);
-                if ($poolInfo->minerCount > 0) {
-                    for ($index=5; $index < count($response); $index++) {
-                        $data = explode(':', $response[$index]);
-                        $miner = new Miner();
-                        $miner->address = $data[0];
-                        $miner->balance = intval($data[1]);
-                        $miner->blocks_until_payment = intval($data[2]);
-                        $poolInfo->miners[] = $miner;
+                // Old system, no Difficulty, no Miner Hashrate
+                if (isset($response[5]) and strpos($response[5], ':') > 0) {
+                    $poolInfo->minerCount = intval($response[4]);
+                    if ($poolInfo->minerCount > 0) {
+                        for ($index=5; $index < count($response); $index++) {
+                            $data = explode(':', $response[$index]);
+                            $miner = new Miner();
+                            $miner->address = $data[0];
+                            $miner->balance = intval($data[1]);
+                            $miner->blocks_until_payment = intval($data[2]);
+                            $poolInfo->miners[] = $miner;
+                        }
+                    }
+                } else
+                // New system, Difficulty and Miner Hashrate
+                if (isset($response[6]) and strpos($response[6], ':') > 0) {
+                    $poolInfo->difficulty = intval($response[4]);
+                    $poolInfo->minerCount = intval($response[5]);
+                    if ($poolInfo->minerCount > 0) {
+                        for ($index=6; $index < count($response); $index++) {
+                            $data = explode(':', $response[$index]);
+                            $miner = new Miner();
+                            $miner->address = $data[0];
+                            $miner->balance = intval($data[1]);
+                            $miner->blocks_until_payment = intval($data[2]);
+                            $miner->hashRate = intval($data[3]);
+                            $poolInfo->miners[] = $miner;
+                        }
                     }
                 }
                 return $poolInfo;
