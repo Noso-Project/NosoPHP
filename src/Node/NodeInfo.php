@@ -13,7 +13,8 @@ class NodeInfo {
     public $syncDelta;
     public $branch;
     public $version;
-    public $mn;
+    public $time;
+    public $mnHash;
 
     public function __construct() {
         $this->host = '';
@@ -24,6 +25,7 @@ class NodeInfo {
         $this->syncDelta = -1;
         $this->branch = 'NONE';
         $this->version = 'UNKNOWN';
+        $this->time = 'UNKNOWN';
         $this->mnHash = 'UNKNOWN';
     }
 }
