@@ -47,7 +47,7 @@ class NosoNode {
                 $nodeInfo->syncDelta = isset($response[4])?$response[4]:-1;
                 $nodeInfo->branch = isset($response[5])?$response[5]:'';
                 $nodeInfo->version = isset($response[6])?$response[6]:'UNKNOWN';
-                $nodeInfo->time = isset($response[7])?$response[7]:'UNKNOWN';
+                $nodeInfo->time = isset($response[7])?$response[7]:-1;
                 $nodeInfo->mnHash = isset($response[8])?$response[8]:'UNKNOWN';
             }
             return $nodeInfo;

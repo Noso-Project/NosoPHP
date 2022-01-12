@@ -25,7 +25,7 @@ class NodeInfo {
         $this->syncDelta = -1;
         $this->branch = 'NONE';
         $this->version = 'UNKNOWN';
-        $this->time = 'UNKNOWN';
+        $this->time = -1;
         $this->mnHash = 'UNKNOWN';
     }
 }
